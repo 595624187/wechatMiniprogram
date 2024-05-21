@@ -1,0 +1,30 @@
+<!--pages/message/message.wxml-->
+<van-button type="primary">按钮</van-button>
+<van-button type="info">按钮</van-button>
+<van-button type="warning">按钮</van-button>
+<van-button type="danger">按钮</van-button>
+<van-button type="default">按钮</van-button>
+<view>
+  <van-button type="primary" bind:tap="getInfo">按钮</van-button>
+</view>
+
+<view>
+  测试store
+  <view>
+    {{numA}}+{{numB}}={{sum}}
+    <view>
+      <van-button bind:tap="btnHandler1" data-step="{{1}}" type="primary">numA+1</van-button>
+      <van-button bind:tap="btnHandler1" data-step="{{-1}}" type="primary">numA-1</van-button>
+    </view>
+  </view>
+</view>
+<view>
+  组件中测试store
+  <my-test></my-test>
+</view>
+<view>
+  <navigator url="/packageA/pages/cat/cat">cat</navigator>
+  <navigator url="/packageA/pages/dog/dog">dog</navigator>
+  <navigator url="/packageB/pages/apple/apple">apple</navigator>
+  <navigator url="/packageB/pages/banana/banana">banana</navigator>
+</view>

@@ -1,0 +1,87 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/message",
+    "pages/contact/contact",
+    "pages/email/email",
+    "pages/logs/logs",
+    "pages/shoplist/shoplist",
+    "packageA/pages/cat/cat",
+    "packageA/pages/dog/dog",
+    "packageB/pages/apple/apple",
+    "packageB/pages/banana/banana"
+  ],
+  "preloadRule": {
+    "packageA/pages/cat/cat": {
+      "packages": [
+        "p1"
+      ],
+      "network": "all"
+    }
+  },
+  "subpackages": [
+    {
+      "root": "pkgA",
+      "name": "p1",
+      "pages": [
+        "packageA/pages/cat/cat",
+        "packageA/pages/dog/dog"
+      ]
+    },
+    {
+      "root": "pkgB",
+      "name": "p2",
+      "pages": [
+        "packageB/pages/apple/apple",
+        "packageB/pages/banana/banana"
+      ],
+      "independent": true
+    }
+  ],
+  "window": {
+    "navigationBarTitleText": "独角戏",
+    "navigationBarBackgroundColor": "#2b4b6b",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle": "dark",
+    "onReachBottomDistance": 100
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "selectedIconPath": "/common/home-active.png",
+        "iconPath": "/common/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/common/message-active.png",
+        "iconPath": "/common/message.png",
+        "pagePath": "pages/message/message",
+        "text": "消息"
+      },
+      {
+        "selectedIconPath": "/common/email-active.png",
+        "iconPath": "/common/email.png",
+        "pagePath": "pages/email/email",
+        "text": "邮箱"
+      },
+      {
+        "selectedIconPath": "/common/contact-active.png",
+        "iconPath": "/common/contact.png",
+        "pagePath": "pages/contact/contact",
+        "text": "联系我们"
+      }
+    ]
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+  }
+}
